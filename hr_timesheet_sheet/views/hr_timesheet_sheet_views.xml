@@ -103,7 +103,6 @@
                         <group name="details">
                             <field
                                 name="company_id"
-                                groups="base.group_multi_company"
                                 force_save="1"
                             />
                             <field name="department_id" invisible="1" />
@@ -115,6 +114,7 @@
                             <group name="Sheet" class="hr_timesheet_sheet_summary">
                                 <field
                                     name="line_ids"
+                                    mode="tree"
                                     nolabel="1"
                                     attrs="{'readonly': [('state', 'not in', ['new', 'draft'])]}"
                                     widget="x2many_2d_matrix"
@@ -137,7 +137,6 @@
                                         <field name="task_id" />
                                         <field
                                             name="company_id"
-                                            groups="base.group_multi_company"
                                         />
                                         <field name="employee_id" />
                                         <field name="new_line_id" invisible="1" />
